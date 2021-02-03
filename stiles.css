@@ -21,17 +21,27 @@ h2 {
   color: white;
 }
 .contenedor-flex {
-}
+  display: flex;
+  flex-direction: row;
+  border: solid 3px black;
 
+  flex-wrap: wrap;
+}
 .elemento-flex {
   padding: 10px;
+
+  flex-grow: 1;
+}
+.elemento-flex:nth-child(1) {
   background-color: #e53935;
+  order: ;
 }
 .elemento-flex:nth-child(2) {
-  padding: 10px;
   background-color: #8e24aa;
+  order: ;
+  flex-grow: ;
 }
 .elemento-flex:nth-child(3) {
-  padding: 10px;
   background-color: #3f5185;
+  order: ;
 }
