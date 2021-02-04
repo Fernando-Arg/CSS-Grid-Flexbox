@@ -43,7 +43,10 @@ aside {
 }
 .servicios {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.servicios.servicio {
+  flex: 1;
 }
 /* ----------------------------------- */
 /*         ---MENU---             */
