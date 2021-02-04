@@ -28,26 +28,47 @@ nav {
 }
 a {
   text-decoration: none;
+  padding-left: 1.5rem;
 }
 
+@media (min-width: 768) {
+  a {
+    padding-left: 2.5rem;
+  }
+}
 .contenedor-flex {
-  display: flex;
   margin-top: 10px;
-
+  display: flex;
   flex-direction: column;
 }
 aside {
   background-color: blueviolet;
-
   order: -1;
+  padding-left: 2rem;
 }
 .servicios {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.servicios.servicio {
-  flex: 1;
+.servicios .servicio {
+  display: flex;
+  padding-left: 2rem;
 }
+
+/* ------------------------------------ */
+/* PONER EN UN SERVICIO ALADO DE OTRO */
+/* ---------------------------------- */
+@media (min-width: 768px) {
+  .servicios {
+    display: flex;
+    flex-direction: row;
+  }
+  .servicios .servicio {
+    flex: 1;
+    justify-content: center; /* Centrar en texto "servicio 1" */
+  }
+}
+
 /* ----------------------------------- */
 /*         ---MENU---             */
 /* --------------------------------- */
@@ -72,8 +93,10 @@ aside {
   aside {
     flex: 1;
     margin-left: 15px;
+    padding-left: 2rem;
+    order: unset; /* poner el orden original */
 
-    order: unset;
+    justify-content: center; /* Centrar en texto "servicio 1" */
   }
 }
 
@@ -82,7 +105,6 @@ aside {
 }
 .servicio:nth-child(1) {
   background-color: #8e24aa;
-  display: flex;
 }
 .elemento1:nth-child(2) {
   background-color: darkmagenta;
